@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Grand Blue 碧藍之海</title>
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <noscript>
+    <link rel="stylesheet" type="text/css" href="css/noJS.css" /></noscript>
+  <style type="text/css">
+    div.center {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 30px;
+      font-weight: bolder;
+    }
+
+    body {
+      font-family: 微軟正黑體;
+    }
+
+    .ca:hover {
+      color: yellow;
+    }
+
+    .title {
+      background-color: #00477D;
+      text-align: center;
+      position: relative;
+    }
+
+    .title img {
+      text-align: center;
+      margin-top: 10px;
+      opacity: 1;
+      margin: 10px;
+      /* CSS3淡出淡入效果,1秒 */
+      -webkit-transition: opacity 0.7s ease-in-out;
+      -moz-transition: opacity 0.7s ease-in-out;
+      -o-transition: opacity 0.7s ease-in-out;
+      transition: opacity 0.7s ease-in-out;
+    }
+
+    .title img:hover {
+      opacity: 0.4;
+      /*滑鼠滑入時，透明度變0*/
+    }
+
+    .win_lose {
+      width: 500px;
+    }
+
+    #div1 {
+      margin: auto;
+      margin-top: 20px;
+      width: 250px;
+      height: 200px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+      background-size: cover;
+      background-image: url('vote.jpg');
+    }
+
+    .bg-text {
+      transform: rotate(2deg);
+      background-color: rgba(0, 0, 0, 0.15);
+      /* Black w/opacity/see-through */
+      font-weight: bolder;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      z-index: 2;
+      left: 5%;
+      width: 90%;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    var count = 1, r, d;
+    var recentQuest = "";
+    var guess = [["動畫中，伊織加入的社團Peek a Boo的社長為 ?", "動畫中，選美比賽將伊織謊稱為男友的同年表親為 ?", "動畫中，被伊織稱作「妝屍獸」（ケバ子）的人物為 ?"],
+    [3, 5, 8],
+    ["動畫中，耕平於社團展覽中所喝的「烏龍茶」為何人所提供 ?", "動畫中，酒吧中耕平與伊織共同做出的「螺絲起子」為何者所點 ?", "動畫中，耕平無潛水經驗卻被何者欺騙進入PaB ?"],
+    [1, 8, 1],
+    ["動畫中，與信治同為三年級的男社員且經常與信治召集大夥一同喝的爛醉為何人 ?", "動畫中，社團展覽中信治曾給何人遞水，實際上卻是伏特加 ?", "動畫中，「乾杯」即「把酒杯乾光」為何人所說?"],
+    [4, 1, 4],
+    ["動畫中，龍次郎曾與何人搭檔打網球，擊敗網球社社長 ?", "動畫中，初次的Grand Blue場景卻看到誰與龍次郎猜拳喝酒 ?", "動畫中，龍次郎為誰展示「烏龍茶」的真正做法 ?"],
+    [3, 3, 1],
+    ["動畫中，選美比賽千紗曾遭到誰的彈力球騷擾而生氣 ?", "動畫中，千紗的親姊姊為何人 ?", "動畫中，千紗曾幫助過誰進行潛水訓練 ?"],
+    [1, 6, 1],
+    ["動畫中，奈奈華曾因為懷疑千紗與誰交往而變得不正常 ?", "奈奈華一度因為誤會誰的意圖不軌導致不敢與他接近 ?", "動畫中，奈奈華的親妹妹為何人 ?"],
+    [1, 1, 5],
+    ["動畫中，梓曾說出自己為雙性戀，則女性為何者 ?", "動畫中，梓曾說出自己為雙性戀，則男性為何者 ?", "動畫中，劃野球拳時梓曾以十分鐘完勝誰 ?"],
+    [6, 3, 1],
+    ["動畫中，自從加入PaB後，愛菜喜歡的對象為 ?", "動畫中，網球社時「妝屍獸」（ケバ子）曾對PaB中誰有好感 ?", "動畫中，愛菜加入PaB為何人所介紹 ?"],
+    [1, 2, 7],
+    ["動畫中，以下人物中唯一有戀人的是誰 ?", "動畫中，擁有「妹控」屬性的是誰 ?", "動畫中，時常穿著宅系動畫T恤，癡迷聲優水樹夏夜的是誰 ?"],
+    [3, 6, 2],
+    ["動畫中，誰曾向PaB社員展現出意外且過人的球技 ?", "動畫中，不勝酒力且酒後性格大變的是誰 ?", "動畫中，沖繩合宿時最後誰沒拿到證照 ?"],
+    [1, 8, 1]];
+    var imageHTML = "<img width='125px' id='drag1' src='http://grandblue-anime.com/core_sys/images/contents/00000006/base/l1.png' draggable='true' ondragstart='drag(event)' />" +
+      "<img width='125px' id='drag2' src='http://grandblue-anime.com/core_sys/images/contents/00000007/base/l1.png' draggable='true' ondragstart='drag(event)' />" +
+      "<img width='125px' id='drag3' src='http://grandblue-anime.com/core_sys/images/contents/00000008/base/l1.png' draggable='true' ondragstart='drag(event)' />" +
+      "<img width='125px' id='drag4' src='http://grandblue-anime.com/core_sys/images/contents/00000009/base/l1.png' draggable='true' ondragstart='drag(event)' />" +
+      "<img width='125px' id='drag5' src='http://grandblue-anime.com/core_sys/images/contents/00000010/base/l1.png' draggable='true' ondragstart='drag(event)' />" +
+      "<img width='125px' id='drag6' src='http://grandblue-anime.com/core_sys/images/contents/00000011/base/l1.png' draggable='true' ondragstart='drag(event)' />" +
+      "<img width='125px' id='drag7' src='http://grandblue-anime.com/core_sys/images/contents/00000012/base/l1.png' draggable='true' ondragstart='drag(event)' />" +
+      "<img width='125px'id='drag8' src='http://grandblue-anime.com/core_sys/images/contents/00000013/base/l1.png' draggable='true' ondragstart='drag(event)' />";
+    function getRandom(num) {
+      var random = Math.floor(Math.random() * num);
+      return random;
+    }
+
+    function playAudio() {
+      var b = document.getElementById("bgm");
+      if (b.paused) {
+        b.play();
+      } else {
+        b.pause();
+      }
+    }
+    function loadimg() {
+      var guess_img = document.getElementById("guess_img");
+      var guess_log = document.getElementById("guess");
+      document.getElementById("div1").innerHTML = "";
+      document.getElementById("div2").innerHTML = imageHTML;
+
+      r = (count - 1);
+      d = getRandom(3);
+      guess_log.innerText = "第" + count + "題 : \n" + guess[r * 2][d];
+
+      guess_img.setAttribute("src", "http://grandblue-anime.com/core_sys/images/main/cont/chara/" + ((r + 1) > 8 ? (getRandom(8) + 1) : (r + 1)) + "_face.png");
+      count += 1;
+    }
+
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+      console.log(data);
+      console.log("drag" + guess[(r * 2) + 1][d]);
+      if (data == "drag" + guess[(r * 2) + 1][d]) {
+        setTimeout(function () {
+          alert("恭喜 ! 答對了 !");
+          if (count == 11) {
+            document.getElementById("show_quest").innerHTML = "<div class='center'>太好了 ! 你真厲害 !</div><br><img class='win_lose' src='win.jpg' draggable='true' ondragstart='drag(event)' />";
+          } else {
+            loadimg();
+          }
+        }, 500);
+      } else {
+        setTimeout(function () {
+          alert("你輸了 ! (ᗒᗣᗕ)՞ !");
+          document.getElementById("show_quest").innerHTML = "<div class='center'>殘念 ! 罰你重看一遍 !</div><br><img class='win_lose' src='lose" + (getRandom(3) + 1) + ".jpg' draggable='true' ondragstart='drag(event)' />";
+        }, 500);
+      }
+    }
+    window.addEventListener("load", loadimg, false);
+  </script>
+</head>
+
+<body>
+  <button onclick="playAudio()" type="button">BGM switch</button>
+  <audio id="bgm" loop>
+    <source src="op.mp3" type="audio/mpeg"></audio>
+  <div class="title"><img src='http://grandblue-anime.com/core_sys/images/main/tz/logo.svg' style="margin-top: 20px;"></div>
+  <div class="container" >
+    <!-- Codrops top bar -->
+    <div class="codrops-top clearfix">
+      <a href="character.html">
+        <strong>&laquo; LAST PAGE </strong>
+      </a>
+      <span class="right">
+        <a href="staff.html">
+          <strong>STAFF &raquo;</strong>
+        </a>
+      </span>
+    </div>
+
+    <!--/ Codrops top bar -->
+    <header class="clearfix">
+      <span>Character &amp; Guessing</span>
+      <a href="character_game.html">
+        <h1 class="ca" style="font-weight: bold;">R E S T A R T</h1>
+      </a>
+    </header>
+
+    <div class="bg-text">
+      <div id="show_quest" class="center">
+        <div class="center"><img id="guess_img" width="450px"></img></div>
+
+        <div id="guess" class="center"></div>
+        <div class="center" style="font-size:18px; margin-top: 20px;">↓ 請拖曳圖片 ↓</div>
+
+        <div class="center">
+          <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div><br>
+
+        <div id="div2" class='center' style='margin-bottom: 100px;'></div>
+      </div>
+    </div>
+
+</body>
+
+</html>
