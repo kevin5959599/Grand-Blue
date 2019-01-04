@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Grand Blue 碧藍之海</title>
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <style type="text/css">
+    div.center {
+      text-align: center;
+    }
+
+    body {
+      font-family: 微軟正黑體;
+    }
+
+    .others {
+      margin-left: 50px;
+      font-weight: bolder;
+      color: black;
+      font-size: 18px;
+      font-family: 微軟正黑體;
+    }
+
+    .ca:hover {
+      color: yellow;
+    }
+
+    .hover {
+      box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1), 0 0 0 rgba(255, 255, 255, 0.3);
+      position: relative;
+    }
+
+    .hover img {
+      text-align: center;
+      margin-top: 10px;
+      opacity: 0.4;
+      margin: 10px;
+      /* CSS3淡出淡入效果,1秒 */
+      -webkit-transition: opacity 0.7s ease-in-out;
+      -moz-transition: opacity 0.7s ease-in-out;
+      -o-transition: opacity 0.7s ease-in-out;
+      transition: opacity 0.7s ease-in-out;
+    }
+
+    .hover img:hover {
+      opacity: 1;
+      /*滑鼠滑入時，透明度變0*/
+    }
+
+    .title {
+      background-color: #00477D;
+      text-align: center;
+      position: relative;
+    }
+
+    .title img {
+      text-align: center;
+      margin-top: 10px;
+      opacity: 1;
+      margin: 10px;
+      /* CSS3淡出淡入效果,1秒 */
+      -webkit-transition: opacity 0.7s ease-in-out;
+      -moz-transition: opacity 0.7s ease-in-out;
+      -o-transition: opacity 0.7s ease-in-out;
+      transition: opacity 0.7s ease-in-out;
+    }
+
+    .title img:hover {
+      opacity: 0.4;
+      /*滑鼠滑入時，透明度變0*/
+    }
+
+    .bg-text {
+      transform: rotate(2deg);
+      background-color: rgba(0, 0, 0, 0.15);
+      /* Black w/opacity/see-through */
+      font-weight: bolder;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      z-index: 2;
+      left: 5%;
+      width: 90%;
+      padding: 20px;
+      margin-top: 50px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function load() {
+      var hv = document.getElementById("hv");
+      var srcmp3 = document.getElementById("srcmp3");
+      var bgm = document.getElementById("bgm");
+
+    }
+    function loadbgm(mp3no) {
+      document.getElementById(mp3no).play();
+    }
+    function stopbgm(mp3no) {
+      document.getElementById(mp3no).pause();
+    }
+    window.addEventListener("load", load, false);
+  </script>
+</head>
+
+<body>
+  <audio id="bgm1">
+    <source src="mp31.mp3" type="audio/mpeg"></audio>
+  <audio id="bgm2">
+    <source src="mp32.mp3" type="audio/mpeg"></audio>
+  <audio id="bgm3">
+    <source src="mp33.mp3" type="audio/mpeg"></audio>
+  <audio id="bgm4">
+    <source src="mp35.mp3" type="audio/mpeg"></audio>
+  <audio id="bgm5">
+    <source src="mp36.mp3" type="audio/mpeg"></audio>
+  <audio id="bgm6">
+    <source src="mp37.mp3" type="audio/mpeg"></audio>
+  <audio id="bgm7">
+    <source src="mp38.mp3" type="audio/mpeg"></audio>
+  <audio id="bgm8">
+    <source src="mp34.mp3" type="audio/mpeg"></audio>
+  <div class="title"><img src='http://grandblue-anime.com/core_sys/images/main/tz/logo.svg' style="margin-top: 20px;"></div>
+  <div class="container">
+    <!-- Codrops top bar -->
+    <div class="codrops-top clearfix">
+      <a href="character.html">
+        <strong>&laquo; LAST PAGE </strong>
+      </a>
+      <span class="right">
+        <a href="staff.html">
+          <strong>STAFF &raquo;</strong>
+        </a>
+      </span>
+    </div>
+
+    <!--/ Codrops top bar -->
+    <header class="clearfix">
+      <span>Character &amp; introduction</span>
+      <h1 style="font-weight: bold;">C H A R A C T E R</h1>
+      <p>Click images to get the character's information.</p>
+    </header>
+
+
+    <!--/character introduce-->
+    <div class="center" style="margin-top: 50px; ">
+      <div id="hv" class="hover">
+        <a onmouseover="loadbgm('bgm1')" onmouseout="stopbgm('bgm1')" href="iori.html"><img id="img1" src="http://grandblue-anime.com/core_sys/images/main/cont/chara/1_body.png"
+            style="width: 71*1.5px; height: 375px;"></a>
+        <a onmouseover="loadbgm('bgm2')" onmouseout="stopbgm('bgm2')" href="kohei.html"><img id="img2" src="http://grandblue-anime.com/core_sys/images/main/cont/chara/2_body.png"
+            style="width: 56*1.5px; height: 375px;"></a>
+        <a onmouseover="loadbgm('bgm3')" onmouseout="stopbgm('bgm3')" href="shinji.html"><img id="img3" src="http://grandblue-anime.com/core_sys/images/main/cont/chara/3_body.png"
+            style="width: 96*1.5px; height: 375px;"></a>
+        <a onmouseover="loadbgm('bgm4')" onmouseout="stopbgm('bgm4')" href="chisa.html"><img id="img4" src="http://grandblue-anime.com/core_sys/images/main/cont/chara/5_body.png"
+            style="width: 60*1.5px; height: 375px;"></a>
+        <a onmouseover="loadbgm('bgm5')" onmouseout="stopbgm('bgm5')" href="nanaka.html"><img id="img5" src="http://grandblue-anime.com/core_sys/images/main/cont/chara/6_body.png"
+            style="width: 66*1.5px; height: 375px;"></a>
+        <a onmouseover="loadbgm('bgm6')" onmouseout="stopbgm('bgm6')" href="azusa.html"><img id="img6" src="http://grandblue-anime.com/core_sys/images/main/cont/chara/7_body.png"
+            style="width: 66*1.5px; height: 375px;"></a>
+        <a onmouseover="loadbgm('bgm7')" onmouseout="stopbgm('bgm7')" href="aina.html"><img id="img7" src="http://grandblue-anime.com/core_sys/images/main/cont/chara/8_body.png"
+            style="width: 75px; height: 375px;"></a>
+        <a onmouseover="loadbgm('bgm8')" onmouseout="stopbgm('bgm8')" href="ryujiro.html"><img id="img8" src="http://grandblue-anime.com/core_sys/images/main/cont/chara/4_body.png"
+            style="width: 118px; height: 375px;"></a>
+      </div>
+    </div>
+    <div class="title" style="height: 3px;margin-top: 30px;"></div>
+
+
+    <div class="bg-text" style="background-image: url('s1.jpg'); background-size: cover;">
+      <div class="others">
+        <a href="character_game.html"><img src="game.png" style="margin-top: 30px; box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1), 0 0 0 rgba(255, 255, 255, 0.3);"><img
+            src="http://grandblue-anime.com/core_sys/images/main/top/please_click.svg" style="width: 45px; height: 50px; margin-left: 5px;"></a>
+        <div style="font-size: 25px; font-family: 微軟正黑體; font-weight: bolder; color:black; margin-bottom: 50px; margin-top: 50px;">
+          其他
+        </div>
+        工藤會長<br>
+        CV：福山潤<br>
+        網球部「Tinker Bell」的部長。黑皮膚的帥哥，長相帥氣但十分風流。曾因為嘲笑愛菜(妝屍獸)而被伊織惡整，之後想報復也換來差不多的結果。<br><br>
+        野島元<br>
+        CV：江口拓也<br>
+        伊織和耕平的同系朋友。戴著黑框眼鏡的長髮的知識分子。參加了伊織的安排的聯誼。<br><br>
+        山本真一郎<br>
+        CV：榎木淳彌<br>
+        伊織和耕平的同學。對女人毫無顧忌的傢伙，是童貞的典範。參加了伊織的安排的聯誼。<br><br>
+        御手洗優<br>
+        CV：花江夏樹<br>
+        伊織和耕平的同學。雖然外表看起來是帥哥，但是是對女人沒頭沒腦的人渣。<br><br>
+        藤原健太<br>
+        CV：羅伯特·沃特曼<br>
+        伊織和耕平的同學。沒有特徵，存在感薄弱。<br><br>
+        神尾清子<br>
+        CV：井口裕香<br>
+        愛菜的同級生。與愛菜一同化妝成妝屍獸的好友之一。愛好是在聯誼會上談論賽馬與彈珠相關的話題，實際不明。<br><br>
+        飯田加奈子<br>
+        CV：儀武祐子<br>
+        愛菜的同級生。與愛菜一同化妝成妝屍獸的好友之一。聲優水樹夏夜的妹妹。愛好是看電影。<br><br>
+        鈴木惠子<br>
+        CV：茅野愛衣<br>
+        愛菜的同級生。與愛菜一同化妝成妝屍獸的好友之一。<br><br>
+        水樹夏夜<br>
+        CV：水樹奈奈玩梗後請本尊聲優出演<br>
+        聲優。本名是摩耶。加奈子的姐姐，梓的朋友，耕平的偶像。在青女的學園祭上舉行了演唱會。出道動畫作品是《溶解!魔法少女菈菈子》。<br><br>
+        北原栞<br>
+        伊織的妹妹，中學3年級生。穿著和服並經常使用敬語說話。為了哥哥代替自己繼承旅館的事業而想讓伊織離開Pab，最終說服失敗。<br>
+        雖然伊織誤認為自己是連電飯煲都不能使用的水平的機械白痴，但實際上卻在郵寄的人偶中放了隱藏的照相機，觀察伊織的情況，精通機器。<br><br><br><br>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
