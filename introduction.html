@@ -1,0 +1,165 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>INTRODUCTION</title>
+    <style type="text/css">
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(bg.jpg);
+            background-attachment: fixed;
+        }
+        h2{
+            color: yellow;
+        }
+        p{
+            color: white;
+        }
+        a{
+            opacity: 1;
+        }
+        .c0{
+            display:flex;
+            align-items:center; 
+           
+        }.d1{
+            width: 30%;
+            height: 100%;
+            text-align: center;
+        }.e1{
+            width: 10%;
+        }.img1{
+            height: 40px;
+            width: 40px;
+            border-radius: 10px;
+
+        }#i1{
+            
+            z-index: 0;
+            width: 60%;
+            height: 100%;
+            background: navy;
+            background-color: none; 
+            text-align: center;
+            
+            
+        }
+        #big{
+            height: 100%;
+            width:62%;
+        }.small{
+            height: 6%;
+            width: 12%;
+        }#tt{
+        
+            color: white;
+        }.ca{
+            height: 5%;
+        }.cc{
+            height: 40%;
+            width: 10%;
+            border-radius: 10px;
+        }#s1{
+            height: 20%;
+        }#s5{
+            height: 10%;
+        }#s3{
+            height: 40%;
+        }#beer{
+            height: 50%;
+            width: 50%;
+        }#ca2{
+            height: 10%;
+        }#ca3{
+            height: 10%;
+        }#vv{
+            height: 100%;
+            width:62%;
+        }
+        
+
+        
+
+    </style>
+    <script>
+        function setImg(x){
+            if(x==1){
+                document.getElementById("big").removeAttribute("hidden");
+                document.getElementById("vv").setAttribute("hidden","true");
+                document.getElementById("big").setAttribute("src","d"+x+".jpg");
+                document.getElementById("tt").innerHTML = "伏特加+檸檬汁+薑汁汽水"
+            }else if(x==2){
+                document.getElementById("big").removeAttribute("hidden");
+                document.getElementById("vv").setAttribute("hidden","true");
+                document.getElementById("big").setAttribute("src","d"+x+".jpg");
+                document.getElementById("tt").innerHTML = "伏特加+哈密瓜蒸餾汁+檸檬汁+覆盆子酒+鳳梨汁"
+            }else if(x==3){
+                document.getElementById("big").removeAttribute("hidden");
+                document.getElementById("vv").setAttribute("hidden","true");
+                document.getElementById("big").setAttribute("src","d"+x+".jpg");
+                document.getElementById("tt").innerHTML = "櫻桃白蘭地+白蘭地+檸檬汁+紅石榴糖漿+柳橙柑香酒"
+            }else if(x==4){
+                document.getElementById("big").setAttribute("hidden","true");
+                document.getElementById("vv").removeAttribute("hidden");
+                document.getElementById("vv").setAttribute("src","d"+x+".webm");
+                document.getElementById("tt").innerHTML = "琴酒+檸檬汁"
+            }else if(x==5){
+                document.getElementById("big").setAttribute("hidden","true");
+                document.getElementById("vv").removeAttribute("hidden");
+                document.getElementById("vv").setAttribute("src","d"+x+".webm");
+                document.getElementById("tt").innerHTML = "螺絲起子+冰塊+水"
+            }else if(x==6){
+                document.getElementById("big").setAttribute("hidden","true");
+                document.getElementById("vv").removeAttribute("hidden");
+                document.getElementById("vv").setAttribute("src","d"+x+".webm");
+                document.getElementById("tt").innerHTML = "伏特加+威士忌"
+            }
+            
+        }
+    </script>
+</head>
+<body >
+    <div class="c0">
+        
+        <div class="d1">
+            <div>
+                <div id="ca3"></div>
+                <a href="home.html"><img src="logo.svg"></a>
+                
+                <div id="ca2"></div>
+                <img src="beer.gif" id="beer">
+            </div>
+        </div>
+        <div id = "i1">
+            <div id = "s1" class="ss">
+                <h2>酒類</h2>
+                <img src="c1.jpg" class="cc" onclick="setImg(1)">
+                <img src="c2.jpg" class="cc" onclick="setImg(2)">
+                <img src="c3.jpg" class="cc" onclick="setImg(3)">
+                <img src="c4.jpg" class="cc" onclick="setImg(4)">
+                <img src="c5.jpg" class="cc" onclick="setImg(5)">
+                <img src="c6.jpg" class="cc" onclick="setImg(6)">
+            </div><hr>
+            <div class="ca"></div>
+            <div id ="s3">
+                <img src="d1.jpg" id="big">
+                <video src="" hidden id="vv" type="video/webm" autoplay></video>
+            </div>
+            <div class="ca"></div><hr>
+            <div id="s5" class="ss">
+                <h2>作法</h2>
+                <h3 id="tt">伏特加+檸檬汁+薑汁汽水</h3>
+            </div>
+        </div>
+        <div class="e1"></div>
+    </div>
+
+    <embed src="m1.flac" autostart=true hidden=true loop=true>
+
+</body>
+</html>

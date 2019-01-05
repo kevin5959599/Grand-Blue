@@ -1,0 +1,125 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>STORY</title>
+    <style type="text/css">
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(bg.jpg);
+            background-attachment: fixed;
+        }
+        h2{
+            color: yellow;
+        }
+        p{
+            color: white;
+        }
+        a{
+            opacity: 1;
+        }
+        .c0{
+            display:flex;
+            align-items:center; 
+           
+        }.d1{
+            width: 20%;
+            height: 100%;
+            
+        }.img1{
+            height: 40px;
+            width: 40px;
+            border-radius: 10px;
+
+        }#i1{
+            
+            z-index: 0;
+            width: 60%;
+            height: 150%;
+            background: navy;
+            background-color: none; 
+            text-align: center;
+            opacity: 0.9;
+            
+        }h3::first-letter{
+            font-size: 200%;
+        }#s3{
+            height: 2%;
+        }#big{
+            height: 30%;
+            width:62%;
+        }.small{
+            height: 6%;
+            width: 12%;
+        }#tt{
+            text-align: left;
+            color: white;
+        }.ca{
+            height: 3%;
+        }
+        
+
+        
+
+    </style>
+    <script>
+        function setImg(x){
+            if(x!=6){
+                document.getElementById("big").setAttribute("src","02/0"+x+".jpg");
+            }
+        }
+    </script>
+</head>
+<body >
+    <div class="c0">
+        
+        <div class="d1"></div>
+        <div id = "i1">
+            <div id = "s1">
+                    <div>
+                            <a href="home.html"><img src="logo.svg"></a>
+                        </div>
+                <h2>故事篇章</h2>
+                <a href="01.html"><img src="01.jpg" class="img1"></a>
+                <a href="02.html"><img src="02.jpg" class="img1"></a>
+                <a href="03.html"><img src="03.jpg" class="img1"></a>
+                <a href="04.html"><img src="04.jpg" class="img1"></a>
+                <a href="05.html"><img src="05.jpg" class="img1"></a>
+                <a href="06.html"><img src="06.jpg" class="img1"></a>
+                <a href="07.html"><img src="07.jpg" class="img1"></a>
+                <a href="08.html"><img src="08.jpg" class="img1"></a>
+                <a href="09.html"><img src="09.jpg" class="img1"></a>
+                <a href="10.html"><img src="10.jpg" class="img1"></a>
+                <a href="11.html"><img src="11.jpg" class="img1"></a>
+                <a href="12.html"><img src="12.jpg" class="img1"></a>
+            </div><hr>
+            <div class="ca"></div>
+            <div id ="s2">
+                <img src="02/01.jpg" id="big">
+            </div>
+            <div id ="s3"></div>
+            <div id="s4">
+                <img src="02/01.jpg" class="small" onclick="setImg(1)">
+                <img src="02/02.jpg" class="small" onclick="setImg(2)">
+                <img src="02/03.jpg" class="small" onclick="setImg(3)">
+                <img src="02/04.jpg" class="small" onclick="setImg(4)">
+                <img src="02/05.jpg" class="small" onclick="setImg(5)">
+            </div>
+            <div class="ca"></div><hr>
+            <div id="s5">
+                <h2>劇情簡介</h2>
+                <h3 id="tt">在大學裡與美男子但實際上是個宅男的今村耕平捲入死鬥之後，伊織加入了潛水社“Peek a Boo”（簡稱“PaB”）。精疲力竭回到家後的伊織，聽聞晚上有與女子大學的交流會後激動不已。然而，表姐奈奈華因為連續三夜不歸宿而不同意伊織外出。為了得到許可，伊織決定打理好房間以表現出自己已經是個自立男人，時田和壽也決定助一臂之力……</h3>
+            </div>
+        </div>
+        <div class="d1"></div>
+    </div>
+
+    <embed src="m1.flac" autostart=true hidden=true loop=true>
+
+</body>
+</html>

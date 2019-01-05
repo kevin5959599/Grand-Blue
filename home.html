@@ -1,0 +1,141 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <title>Page Title</title>
+    <style type="text/css">
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }#myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+
+            opacity: 0.1;
+        }#title1{
+            
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin: 0;
+           
+        }.c2{
+            width: 100%;
+            height: 100%;
+            display:flex;
+            align-items:center; 
+            
+        }nav ul{ 
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }nav:hover ul{ 
+            display: block; 
+        }a{ 
+            text-decoration: none; 
+            color: cornflowerblue;
+            
+        }a:hover{
+            color: red;
+        }li{
+            font-family: fantasy;
+            font-size: 200%;
+        }.d1{
+            width: 100%;
+            height: 100%;
+            display:flex;
+            align-items:center; 
+            
+        }#d1{
+            position: relative;
+            z-index: 1;
+        }.d2{
+            width: 30%
+        }.t1{
+            color: cornflowerblue;
+        }.a2{          
+            position: relative;
+            z-index: 1;
+            height: 75%;
+            width: 75%;
+            left: 5%;
+            
+        }#i1{position: relative;}
+        .a2{
+            position:absolute;
+            -webkit-transition: opacity 2s ease-in-out;
+            -moz-transition: opacity 2s ease-in-out;
+            -o-transition: opacity 2s ease-in-out;
+            transition: opacity 2s ease-in-out;
+        }.a2:last-child:hover{
+            opacity:0;
+        }
+
+        
+
+    </style>
+    <script>
+        
+        function img1(x){
+            x.setAttribute("src","a3.jpg");
+        }
+        function img2(x){
+            x.setAttribute("src","a2.jpg");
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <div class="c2">
+            <div class="d2"></div>
+            <div class="d1" id ="i1">
+                <img  class = "a2"src="a3.jpg">
+                <img  class = "a2"src="a2.jpg">
+            </div>
+            
+            <div class="d1" id = "title1">
+                <nav><img id = "a3"src="logo.svg">
+                    <ul>
+                        <li><a href = "01.html">STORY</a></li>
+                        <li><a href = "staff.html">STAFF</a></li>
+                        <li><a href = "character.html">Character</a></li>
+                        <li><a href = "introduction.html">Introduction</a></li>
+                        <li><a href = "#">Game</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div id = "d1">
+                <h3 class="t1">PV 第1彈</h3>
+                <embed src="https://www.youtube.com/v/9QIorF0tUEU&autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="360" height="240"></embed>
+                <embed src=""  height="40" hidden></embed>
+                <h3 class="t1">PV 第2彈</h3>
+                <embed src="http://www.youtube.com/v/m-nN3SlHwZk&autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="360" height="240"></embed>
+            </div>
+            <div class="d2"></div>
+        </div>
+
+        
+        
+       
+        
+        
+    </div>
+    <embed src="op.mp3" autostart=true hidden=true loop=true>
+    <video autoplay muted loop id="myVideo">
+            <source src="v3.webm" type="video/webm">
+    </video>
+
+</body>
+</html>

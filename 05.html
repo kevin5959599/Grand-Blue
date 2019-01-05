@@ -1,0 +1,125 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>STORY</title>
+    <style type="text/css">
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(bg.jpg);
+            background-attachment: fixed;
+        }
+        h2{
+            color: yellow;
+        }
+        p{
+            color: white;
+        }
+        a{
+            opacity: 1;
+        }
+        .c0{
+            display:flex;
+            align-items:center; 
+           
+        }.d1{
+            width: 20%;
+            height: 100%;
+            
+        }.img1{
+            height: 40px;
+            width: 40px;
+            border-radius: 10px;
+
+        }#i1{
+            
+            z-index: 0;
+            width: 60%;
+            height: 150%;
+            background: navy;
+            background-color: none; 
+            text-align: center;
+            opacity: 0.9;
+            
+        }h3::first-letter{
+            font-size: 200%;
+        }#s3{
+            height: 2%;
+        }#big{
+            height: 30%;
+            width:62%;
+        }.small{
+            height: 6%;
+            width: 12%;
+        }#tt{
+            text-align: left;
+            color: white;
+        }.ca{
+            height: 3%;
+        }
+        
+
+        
+
+    </style>
+    <script>
+        function setImg(x){
+            if(x!=6){
+                document.getElementById("big").setAttribute("src","05/0"+x+".jpg");
+            }
+        }
+    </script>
+</head>
+<body >
+    <div class="c0">
+        
+        <div class="d1"></div>
+        <div id = "i1">
+            <div id = "s1">
+                    <div>
+                            <a href="home.html"><img src="logo.svg"></a>
+                        </div>
+                <h2>故事篇章</h2>
+                <a href="01.html"><img src="01.jpg" class="img1"></a>
+                <a href="02.html"><img src="02.jpg" class="img1"></a>
+                <a href="03.html"><img src="03.jpg" class="img1"></a>
+                <a href="04.html"><img src="04.jpg" class="img1"></a>
+                <a href="05.html"><img src="05.jpg" class="img1"></a>
+                <a href="06.html"><img src="06.jpg" class="img1"></a>
+                <a href="07.html"><img src="07.jpg" class="img1"></a>
+                <a href="08.html"><img src="08.jpg" class="img1"></a>
+                <a href="09.html"><img src="09.jpg" class="img1"></a>
+                <a href="10.html"><img src="10.jpg" class="img1"></a>
+                <a href="11.html"><img src="11.jpg" class="img1"></a>
+                <a href="12.html"><img src="12.jpg" class="img1"></a>
+            </div><hr>
+            <div class="ca"></div>
+            <div id ="s2">
+                <img src="05/01.jpg" id="big">
+            </div>
+            <div id ="s3"></div>
+            <div id="s4">
+                <img src="05/01.jpg" class="small" onclick="setImg(1)">
+                <img src="05/02.jpg" class="small" onclick="setImg(2)">
+                <img src="05/03.jpg" class="small" onclick="setImg(3)">
+                <img src="05/04.jpg" class="small" onclick="setImg(4)">
+                <img src="05/05.jpg" class="small" onclick="setImg(5)">
+            </div>
+            <div class="ca"></div><hr>
+            <div id="s5">
+                <h2>劇情簡介</h2>
+                <h3 id="tt">跟往常一樣光著膀子穿著內褲就去上課了的伊織和耕平，感受到了周圍傳來的充滿殺氣的視線。心情本應很糟糕的千紗也投來了燦爛的笑容，總覺得哪裡不對勁……然而理由居然是伊織和千紗正在交往了這件事。感覺到生命危險的兩人不由得說出了幫他們舉辦聯誼這樣的話語，事態變得更加麻煩了。他們拜託梓去拉女生，然而她帶來的是吉原愛菜——在伊豆春祭上遇到的“瞎眼女”。</h3>
+            </div>
+        </div>
+        <div class="d1"></div>
+    </div>
+
+    <embed src="m1.flac" autostart=true hidden=true loop=true>
+
+</body>
+</html>
